@@ -1,0 +1,44 @@
+/* Definindo o estilo para centralizar o formulário */
+.container-principal {
+    display: flex;                /* Usando Flexbox */
+    justify-content: center;      /* Centraliza horizontalmente */
+    align-items: center;          /* Centraliza verticalmente */
+    height: 100%;                /* Altura total da tela */
+    background-color: #f0f0f0;    /* Cor de fundo suave */
+}
+
+.formulario {
+    background-color: #fff;       /* Cor de fundo branca para o formulário */
+    padding: 20px;                /* Espaçamento interno */
+    border-radius: 10px;          /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 300px;                 /* Largura do formulário */
+}
+form h3 {
+    text-align: center;           /* Alinha o título ao centro */
+    margin-bottom: 20px;          /* Espaçamento abaixo do título */
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;                  /* Largura total do campo */
+    padding: 10px;                /* Espaçamento interno */
+    margin: 10px 0;               /* Espaçamento entre os campos */
+    border: 1px solid #ccc;      /* Borda suave */
+    border-radius: 5px;          /* Bordas arredondadas */
+    font-size: 14px;              /* Tamanho da fonte */
+}
+
+input[type="submit"] {
+    width: 100%;                  /* Largura total do botão */
+    padding: 10px;                /* Espaçamento interno */
+    background-color: #4CAF50;    /* Cor de fundo verde */
+    color: white;                 /* Cor do texto */
+    border: none;                 /* Remove a borda padrão */
+    border-radius: 5px;          /* Bordas arredondadas */
+    font-size: 16px;              /* Tamanho da fonte */
+    cursor: pointer;             /* Cursor de mãozinha */
+}
+
+input[type="submit"]:hover {
+    background-color: #458ba0;    /* Muda a cor do botão ao passar o mouse */
+}
