@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.container {
+    display: flex;
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+    min-height: 100px;
+}
+
+.item {
+    background: lightblue;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    flex: 1;
+}
+
+.direction {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.flow {
+    flex-flow: row wrap;
+}
+
+.justify {
+    justify-content: space-around;
+}
+
+.align-items {
+    align-items: center;
+    height: 150px;
+}
+
+.align-content {
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 200px;
+}
