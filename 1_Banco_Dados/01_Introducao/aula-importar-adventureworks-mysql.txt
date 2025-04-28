@@ -1,0 +1,13 @@
+Aula do dia 28/11
+------------------------------
+
+1. Abrir e executar o Apache e MySQL no XAAMP
+2. Em seguida, vamos acessar o console do MySQL
+3. crie o banco de dados "AdventureWorks_ETEC"
+
+    create database AdventureWorks_ETEC;
+    use your_database_name;
+
+4. Agora, após setar para o SGBDR qual banco estamos usando, vamos realizar a importação das tabelas e registros;
+
+source /home/sysadmin/Downloads/AdventureWorks2019.sql;
