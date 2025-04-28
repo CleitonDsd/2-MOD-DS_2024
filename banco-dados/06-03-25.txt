@@ -1,0 +1,86 @@
+COMANDOS DDL
+
+CREATE TABLE livros (
+    id INT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    ano_publicacao INT,
+    genero VARCHAR(100),
+    preco DECIMAL(10,2)
+);
+
+-- Alterações na tabela
+ALTER TABLE livros ADD editora VARCHAR(255);
+ALTER TABLE livros MODIFY preco DECIMAL(12,2);
+ALTER TABLE livros DROP COLUMN genero;
+
+-- Excluir a tabela
+DROP TABLE livros;
+
+-- Remover todos os registros da tabela, mantendo a estrutura
+TRUNCATE TABLE livros;
+
+------------------------------
+
+DML 
+
+INSERT INTO livros (id, titulo, autor, ano_publicacao, genero, preco)
+VALUES (1, 'Dom Casmurro', 'Machado de Assis', 1899, 'Romance', 39.90);
+
+
+INSERT MULTIPLO
+
+INSERT INTO livros (id, titulo, autor, ano_publicacao, genero, preco) VALUES
+(2, '1984', 'George Orwell', 1949, 'Ficção Científica', 45.50),
+(3, 'O Senhor dos Anéis', 'J.R.R. Tolkien', 1954, 'Fantasia', 120.00),
+(4, 'A Arte da Guerra', 'Sun Tzu', -500, 'Estratégia', 30.00);
+
+
+--------------------------------
+
+
+### Chave Primária (PK - Primary Key)
+A chave primária (PK - Primary Key) é um identificador único para cada registro de uma tabela.
+
+Características da PK:
+- Garante unicidade (cada valor deve ser único).
+- Não pode ter valores NULL.
+- Uma tabela pode ter apenas uma chave primária.
+- Geralmente é um ID numérico.
+
+Exemplo de PK:
+CREATE TABLE livros (
+    id INT PRIMARY KEY AUTO_INCREMENT,  -- Chave primária com autoincremento
+    titulo VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    ano_publicacao INT,
+    preco DECIMAL(10,2)
+);
+
+### Chave Estrangeira (FK - Foreign Key)
+A chave estrangeira (FK - Foreign Key) estabelece uma relação entre tabelas, referenciando a chave primária de outra tabela.
+
+Características da FK:
+- Mantém a integridade referencial entre tabelas.
+- Pode ter valores repetidos (se a relação for 1 para N).
+- Pode ser NULL (caso o relacionamento seja opcional).
+
+Exemplo com FK:
+CREATE TABLE editoras (
+    id INT PRIMARY KEY AUTO_INCREMENT,  -- PK com autoincremento
+    nome VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE livros (
+    id INT PRIMARY KEY AUTO_INCREMENT,  -- PK com autoincremento
+    titulo VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    ano_publicacao INT,
+    preco DECIMAL(10,2),
+    editora_id INT,
+    FOREIGN KEY (editora_id) REFERENCES editoras(id) -- Chave estrangeira
+);
+
+Resumo:
+- PK = Identifica unicamente um registro dentro da tabela.
+- FK = Cria um vínculo entre tabelas, garantindo relacionamentos consistentes.
