@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script src="./js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div class="container-principal">
+        <div class="formulario">
+            <form id="form-cadastro" action="../php/cadastrar-usuario.php" method="POST">
+                <h3>Cadastro de Usuário</h3>
+                <input type="text" name="nome" placeholder="Nome Completo:" required minlength="3" maxlength="80">
+                <input type="email" name="email" placeholder="E-mail:" required>
+                <input type="text" name="usuario" placeholder="Usuário:" required minlength="3" maxlength="15">
+                <input type="password" name="senha" placeholder="Senha:" required minlength="3" maxlength="8">
+                <input type="submit" value="Cadastrar">
+            </form>
+            <a href="../index.html">Já tem conta? Acesse aqui.</a>
+        </div>
+    </div>
+</body>
+
+</html>

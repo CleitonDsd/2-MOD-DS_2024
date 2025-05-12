@@ -1,0 +1,39 @@
+<html lang="pt-br">
+    <head>
+        <!--Serve par setar o UNICODE do site para o usado em PT-BR-->
+        <meta charset="UTF-8"/> 
+        <title>Tela de Login</title>
+        <title>Seja bem-vindo</title>
+        
+        <!--vinculando a tela, com o CSS para estilizar a página-->
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+        <!--vinculando tela com o script que vamos criar as funcionalidades-->
+        <script src="./js/index.js"></script>
+
+        <!-- Para usar o  SweetAlert2 CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    </head>
+    <body>
+        <!--Essa div, representa onde todo o conteúdo do site vai ficar-->
+        <div class="container-principal">
+            <!-- aqui é o espaço onde vamos criar o formulário-->
+            <div class="formulario">
+                <form id="form-login" action="./php/login.php" method="POST">
+                    <h3>Login</h3>
+                    <!-- adicionando campos do formulário-->
+                    <input type="text" placeholder="Usuário:" name="usuario" id="usuario" required="true" minlength="3" maxlength="15">
+
+                    <input type="password" placeholder="Senha:" name="senha" id="senha" required="true" minlength="3" maxlength="8">
+
+                    <!--adicionando botão que irá enviar as informações do site -->
+                    <input type="submit" value="Entrar">
+                    <br>
+                    <a href="./html/cadastro-usuario.html">cadastre-se aqui.</a>
+                </form>
+                
+            </div>
+        </div>
+    </body>
+</html>
