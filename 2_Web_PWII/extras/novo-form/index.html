@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contato</title>
+  <!-- link para as fontes awesome que serão utilizadas -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+  <!-- meu css -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <!-- div para receber todo o conteúdo -->
+  <div class="container">
+
+    <!-- primeira coluna -->
+    <div class="primary">
+      <h2>Formulário de Contato</h2>
+
+      <!-- ícone principal - a classe icone foi criada por mim para formatar o elemento -->
+      <span class="fas fa-universal-access icone"></span>
+
+      <!-- redes sociais  criamos a classe para fazer a formatação dos ícones -->
+      <p>
+        <a href="#"><span class="fab fa-twitter redes-sociais"></span></a>
+        <a href="#"><span class="fab fa-instagram redes-sociais"></span></a>
+        <a href="#"><span class="fab fa-facebook redes-sociais"></span></a>
+        <a href="#"><span class="fab fa-youtube redes-sociais"></<span></a>
+      </p>
+    </div>
+    <!-- fim primeira coluna -->
+
+    <!-- segunda coluna - FORMULÁRIO -->
+    <div class="secundary">
+      <form id="contato" action="" method="post">
+        <fieldset>
+          <input type="text" id="nome" placeholder="Seu nome" class="user" required autofocus>
+        </fieldset>
+
+        <fieldset>
+          <input type="email" id="email" placeholder="Seu email" class="email" required>
+        </fieldset>
+
+        <fieldset>
+          <input type="tel" id="telefone" placeholder="Seu telefone" class="telefone" required>
+        </fieldset>
+
+        <fieldset>
+          <input type="tel" id="celular" placeholder="Seu celular" class="celular" required>
+        </fieldset>
+
+        <fieldset>
+          <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <button type="submit" id="enviar">Enviar</button>
+        </fieldset>
+
+      </form>
+
+    </div>
+    <!--  fim segunda coluna -->
+
+
+  </div>
+  <!-- fim do conteúdo -->
+
+</body>
+
+</html>

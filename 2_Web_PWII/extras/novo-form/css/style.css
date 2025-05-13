@@ -1,0 +1,144 @@
+/* importanfdo a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* mini reset css  asterisco representa todas as tags*/
+*{
+  margin: 0;
+  padding: 0;
+  /* com box-sizing o valor do padding não é atribuido ao elemento */
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+  background: #ccc;
+}
+
+/* classe container - todo conteúdo do html
+flexbox  - alinhamento dinâmico sem precisar de float - display inline
+o container pai precisa ser flex
+definir a direção dele - horizontal (eixo x) vertical(eixo y)
+padrao ele é um elemento em linha - colocar elementos na mesma linha - row
+
+ */
+.container{
+  width: 80%;
+  /* largura mínima do container */
+  min-width: 800px;
+  height: 600px;
+  margin: 10px auto;
+  border-radius: 5px;
+  background: #fff;
+  /* por causa do padrão em linha(row) deixous os container um ao lado do outro */
+  display: flex;
+
+}
+
+/* formatar as divs que estão dentro do container */
+.primary, .secundary{
+  width: 60%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  /* muda a direção dos elementos - padrão é row - mudou para column  */
+  flex-direction: column;
+  /* define onde os elementos iniciarão */
+  justify-content: center;
+  /* definir alinhamento vertical */
+  align-items: center;
+}
+
+/* formatação exclusiva para a classe primary */
+.primary{
+  width: 40%;
+  background: #dc143c;
+  color: #fff;
+  border-radius: 5px 0 0 5px;
+}
+
+/* apenas o h2 do primary será formatado */
+.primary h2{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.icone{
+  font-size: 300px;
+  padding: 20px 0;
+  border-top: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+}
+
+.redes-sociais{
+  color: #fff;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.redes-sociais:hover{
+  color: #aa0a2a;
+}
+
+/* ----------------------------------FORMULÁRIO----------------------------------- */
+#contato{
+  width: 100%;
+  padding: 25px;
+  margin: 50px 0;
+}
+
+fieldset{
+  border: none;
+  margin-bottom: 10px;
+}
+
+#contato input[type="text"],
+#contato input[type="email"],
+#contato input[type="tel"],
+#contato textarea{
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 5px;
+  padding: 10px 10px 10px 50px;
+  background-repeat: no-repeat;
+  background-position: 8px center;
+  border: 1px solid #ccc;
+}
+
+#contato textarea{
+  height: 160px;
+  resize: none;
+  padding-left: 15px;
+}
+
+#contato button{
+  font-family: 'Lato', sans-serif;
+  padding: 10px 40px;
+  font-size: 18px;
+  border: none;
+  background: #dc143c;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+}
+
+#contato input:focus,
+#contato textarea:focus{
+  outline: 0;
+  border: 1px solid #DC143C;
+}
+
+.user{background: url(../images/user2.png);}
+.email{background: url(../images/email2.png);}
+.celular{background: url(../images/celular2.png);}
+.telefone{background: url(../images/telefone2.png);}
+
+
+.user:focus{background: url(../images/user1.png);}
+.email:focus{background: url(../images/email1.png);}
+.celular:focus{background: url(../images/celular1.png);}
+.telefone:focus{background: url(../images/telefone1.png);}

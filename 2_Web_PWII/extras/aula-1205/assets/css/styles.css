@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Catamaran', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-attachment: fixed;
+}
+
+.bg-image-1 {
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .3)),
+    url(../images/pexels-freemockupsorg-775219.jpg);    
+}
+
+.bg-image-2 {
+    background-image: url(../images/pexels-quang-nguyen-vinh-6129991-1.jpg);
+}
+
+.bg-dark {
+    background-color: #000;
+}
+
+.icons {
+    margin-left: 7px;
+}
+
+.btn:hover .icons {
+    animation: reservar .5s infinite;
+
+}

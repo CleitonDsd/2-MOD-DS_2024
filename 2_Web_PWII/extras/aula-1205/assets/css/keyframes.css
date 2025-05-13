@@ -1,0 +1,14 @@
+@keyframes reservar {
+    50% {
+        transform: translateX(7px);
+    }
+    
+    70%{
+        
+        transform: translateY(7px);
+    }
+    
+    100% {
+        transform: translateX(-7px);        
+    }
+}
